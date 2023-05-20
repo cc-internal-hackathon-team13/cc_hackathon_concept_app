@@ -14,5 +14,6 @@ List<Stock> stocks = <Stock>[
   Stock(
       icon: Icons.mark_email_read_rounded, name: "Amazon", nasdqaName: "AMZN"),
   Stock(icon: Icons.book_online_rounded, name: "Meta", nasdqaName: "MTA"),
-  Stock(icon: Icons.gps_off_rounded, name: "Google", nasdqaName: "GGL"),
+  Stock(icon: Icons.gps_off_rounded, name: "Google", nasdqaName: "GOOGL"),
+  Stock(icon: Icons.video_call_rounded, name: "Netflix", nasdqaName: "NFLX"),
 ];

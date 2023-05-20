@@ -10,6 +10,7 @@ class HackathonApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Stock Market Analysis',
+      initialRoute: '/',
       theme: ThemeData(
           useMaterial3: true,
           colorScheme: ColorScheme.fromSeed(seedColor: _seedColor)),

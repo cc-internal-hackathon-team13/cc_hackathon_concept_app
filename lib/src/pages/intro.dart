@@ -16,7 +16,7 @@ class IntroPageState extends State<IntroPage> {
         body: PageView(
       controller: controller,
       children: <Widget>[
-        ColoredBox(color: Theme.of(context).colorScheme.primaryContainer),
+        ColoredBox(color: Theme.of(context).colorScheme.secondaryContainer),
         ColoredBox(
           color: Theme.of(context).colorScheme.tertiaryContainer,
           child: Padding(

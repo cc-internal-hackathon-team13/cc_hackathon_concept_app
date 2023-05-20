@@ -17,7 +17,7 @@ class _PredictionPageState extends State<PredictionPage> {
         appBar: AppBar(
             leading: IconButton(
               icon: const Icon(Icons.arrow_back_ios_new_rounded),
-              onPressed: () {},
+              onPressed: () => Navigator.of(context).pop(),
             ),
             title: Text(widget.stock.name)),
         body: Center(

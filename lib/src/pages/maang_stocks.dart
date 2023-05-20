@@ -19,9 +19,9 @@ class MAANGStocksPageState extends State<MAANGStocksPage> {
       crossAxisAlignment: CrossAxisAlignment.center,
       children: stocks
           .map((Stock stock) => ListTile(
-                leading: const Icon(Icons.apple),
-                title: const Text("Apple"),
-                subtitle: const Text("APPL"),
+                leading: Icon(stock.icon),
+                title: Text(stock.name),
+                subtitle: Text(stock.nasdqaName),
                 onTap: () {
                   Navigator.of(context).push(MaterialPageRoute(
                       builder: ((context) => PredictionPage(stock: stock))));
