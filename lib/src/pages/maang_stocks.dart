@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:cc_hackathon_concept_app/src/pages/prediction_page.dart';
+import 'package:cc_hackathon_concept_app/src/pages/stock_data.dart';
 import 'package:cc_hackathon_concept_app/src/entities/stock.dart';
 
 class MAANGStocksPage extends StatefulWidget {
@@ -24,7 +24,7 @@ class MAANGStocksPageState extends State<MAANGStocksPage> {
                 subtitle: Text(stock.nasdqaName),
                 onTap: () {
                   Navigator.of(context).push(MaterialPageRoute(
-                      builder: ((context) => PredictionPage(stock: stock))));
+                      builder: ((context) => StockDataPage(stock: stock))));
                 },
               ))
           .toList(),

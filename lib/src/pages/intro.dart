@@ -19,35 +19,40 @@ class IntroPageState extends State<IntroPage> {
       physics: const ClampingScrollPhysics(),
       children: <Widget>[
         ColoredBox(
-          color: Theme.of(context).colorScheme.tertiaryContainer,
+          color: Theme.of(context).colorScheme.background,
           child: Padding(
             padding: const EdgeInsets.all(8.0),
-            child: Column(mainAxisSize: MainAxisSize.min, children: <Widget>[
-              Padding(
-                padding: const EdgeInsets.only(top: 8.0),
-                child: Image.asset(
-                  "assets/art/human_sitting.png",
-                  fit: BoxFit.fitHeight,
-                  height: size.height * .65,
-                ),
-              ),
-              const SizedBox(height: 48),
-              Text("Be aware for what it means to be open-source",
-                  style: Theme.of(context).textTheme.headlineLarge?.copyWith(
-                      fontWeight: FontWeight.w600,
-                      color:
-                          Theme.of(context).colorScheme.onTertiaryContainer)),
-              const SizedBox(height: 8),
-              Text("Model trained on public & trusted sources",
-                  style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-                      fontWeight: FontWeight.w600,
-                      color:
-                          Theme.of(context).colorScheme.onTertiaryContainer)),
-            ]),
+            child: Column(
+                mainAxisSize: MainAxisSize.min,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                  Padding(
+                    padding: const EdgeInsets.only(top: 8.0, left: 32.0),
+                    child: Image.asset(
+                      "assets/art/human_sitting.png",
+                      fit: BoxFit.fitHeight,
+                      height: size.height * .65,
+                    ),
+                  ),
+                  const SizedBox(height: 48),
+                  Text("Be aware for what it means to be open-source",
+                      style: Theme.of(context)
+                          .textTheme
+                          .headlineLarge
+                          ?.copyWith(
+                              fontWeight: FontWeight.w600,
+                              color:
+                                  Theme.of(context).colorScheme.onBackground)),
+                  const SizedBox(height: 8),
+                  Text("Model trained on public & trusted sources",
+                      style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                          fontWeight: FontWeight.w600,
+                          color: Theme.of(context).colorScheme.onBackground)),
+                ]),
           ),
         ),
         ColoredBox(
-          color: Theme.of(context).colorScheme.tertiaryContainer,
+          color: Theme.of(context).colorScheme.background,
           child: Padding(
             padding:
                 const EdgeInsets.symmetric(vertical: 32.0, horizontal: 8.0),
@@ -56,33 +61,36 @@ class IntroPageState extends State<IntroPage> {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
+                Image.asset("assets/art/candlesticks.png",
+                    fit: BoxFit.fitHeight, height: size.height * .30),
                 Padding(
-                  padding: const EdgeInsets.only(left: 32.0),
-                  child: Image.asset("assets/art/candlesticks.png",
-                      fit: BoxFit.fitHeight, height: size.height * .30),
-                ),
-                Column(
-                  mainAxisSize: MainAxisSize.min,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    const SizedBox(height: 16.0),
-                    Text("Know the predictions of stocks till the next week",
-                        style: Theme.of(context)
-                            .textTheme
-                            .headlineLarge
-                            ?.copyWith(
-                                fontWeight: FontWeight.w600,
-                                color: Theme.of(context)
-                                    .colorScheme
-                                    .onTertiaryContainer)),
-                    const SizedBox(height: 4.0),
-                    Text("Famous MAANG stocks involved",
-                        style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-                            fontWeight: FontWeight.w600,
-                            color: Theme.of(context)
-                                .colorScheme
-                                .onTertiaryContainer)),
-                  ],
+                  padding: const EdgeInsets.only(left: 48.0),
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const SizedBox(height: 16.0),
+                      Text("Know the predictions of stocks till the next week",
+                          style: Theme.of(context)
+                              .textTheme
+                              .headlineLarge
+                              ?.copyWith(
+                                  fontWeight: FontWeight.w600,
+                                  color: Theme.of(context)
+                                      .colorScheme
+                                      .onBackground)),
+                      const SizedBox(height: 8.0),
+                      Text("Famous MAANG stocks involved",
+                          style: Theme.of(context)
+                              .textTheme
+                              .bodyLarge
+                              ?.copyWith(
+                                  fontWeight: FontWeight.w600,
+                                  color: Theme.of(context)
+                                      .colorScheme
+                                      .onBackground)),
+                    ],
+                  ),
                 ),
                 Align(
                   alignment: Alignment.bottomCenter,
@@ -106,7 +114,7 @@ class IntroPageState extends State<IntroPage> {
                                   ?.copyWith(
                                       color: Theme.of(context)
                                           .colorScheme
-                                          .onPrimaryContainer),
+                                          .onBackground),
                             ),
                           ),
                           const Icon(Icons.arrow_right_alt_rounded, size: 48),
